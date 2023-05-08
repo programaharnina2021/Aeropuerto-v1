@@ -1,6 +1,6 @@
 package modelo;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -8,10 +8,14 @@ public class Vuelo {
 
 	private Long idEspecifico;
 	private Trayecto trayecto;
-	private LocalDateTime fechaSalida;
+	private LocalDate fechaSalida;
 	private LinkedList<Asiento> asientos;
 	
-	public Vuelo(Long idEspecifico, Trayecto trayecto, LocalDateTime fechaSalida,int cantidadAsientos) {
+	public int getCantidadAsientos() {
+		return asientos.size();
+	}
+
+	public Vuelo(Long idEspecifico, Trayecto trayecto, LocalDate fechaSalida,int cantidadAsientos) {
 		super();
 		this.idEspecifico = idEspecifico;
 		this.trayecto = trayecto;
